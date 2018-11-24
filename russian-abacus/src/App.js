@@ -22,7 +22,7 @@ class App extends Component {
                 {
                     id: generateCode(),
                     rows: 8,
-                    quaters: false
+                    quaters: true
                 }
             ]
         }
@@ -39,7 +39,7 @@ class App extends Component {
                 {
                     id: generateCode(),
                     rows: 8,
-                    quaters: false
+                    quaters: true
                 }
             ]
         })
