@@ -1,0 +1,12 @@
+.Abacus {
+    border: solid 30px #996624;
+    width: calc(33.75px * 13);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 10;
+    cursor: grab;
+}
+
+.Abacus:active {
+    cursor: grabbing;
+}

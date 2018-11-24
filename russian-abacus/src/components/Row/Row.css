@@ -1,0 +1,35 @@
+.Row {
+    /* background-color:rgba(0, 0, 0, 0.1); */
+    height: 75px;
+    max-width: calc(33.75px * 16);
+    min-width: calc(33.75px * 11.5);
+    width: 100%;
+    position: relative;
+    cursor: initial;
+}
+
+.Rail {
+    height: 7.5px;
+    background-color: #bababa;
+    position: relative;
+    top: 33.75px;
+}
+
+.Die {
+    height: 67.5px;
+    width: 30px;
+    position: absolute;
+    top: calc(7.5px/2);
+    margin: 0 1.875px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.Die.dark {
+    background-color: #242014;
+}
+
+.Die.light {
+    background-color: #ddcfaa;
+}

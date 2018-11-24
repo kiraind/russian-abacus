@@ -1,0 +1,29 @@
+.ClearFab {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    background-color: hsl(10, 72%, 62%);
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.ClearFab img {
+    pointer-events: none;
+    transform: rotate(45deg)
+}
+
+.ClearFab:active {
+    box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.04);
+}
+
+.ClearFab:active img {
+    width: 48px;
+    height: 48px;
+}

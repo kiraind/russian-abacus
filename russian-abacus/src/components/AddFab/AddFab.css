@@ -1,0 +1,28 @@
+.AddFab {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: hsl(140, 72%, 62%);
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.15);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.AddFab img {
+    pointer-events: none;
+}
+
+.AddFab:active {
+    box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.04);
+}
+
+.AddFab:active img {
+    width: 48px;
+    height: 48px;
+}
