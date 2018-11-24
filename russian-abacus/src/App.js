@@ -17,8 +17,13 @@ class App extends Component {
     constructor(props) {
         super(props)
 
+        let saved = localStorage.getItem('abacuses')
+
+        if(saved === '[]')
+            saved = null
+
         this.state = {
-            abacuses: [
+            abacuses: saved ? JSON.parse(saved) : [
                 {
                     id: generateCode(),
                     rows: 8,
@@ -26,6 +31,9 @@ class App extends Component {
                 }
             ]
         }
+
+        if(!saved)
+            localStorage.setItem('abacuses', JSON.stringify(this.state.abacuses))
 
         this.newAbacus = this.newAbacus.bind(this)
         this.toFront = this.toFront.bind(this)
@@ -66,9 +74,15 @@ class App extends Component {
     }
 
     clearAll() {
+        this.state.abacuses.forEach(abc => localStorage.removeItem(abc.id))
+
         this.setState({
             abacuses: []
         })
+    }
+
+    componentDidUpdate() {
+        localStorage.setItem('abacuses', JSON.stringify(this.state.abacuses))
     }
 
     render() {

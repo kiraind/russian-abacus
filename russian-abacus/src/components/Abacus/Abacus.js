@@ -22,11 +22,13 @@ class Abacus extends Component {
                 taken: 0
             })
 
-        this.state = {
+        const saved = localStorage.getItem(this.props.id)
+
+        this.state = saved ? JSON.parse(saved) : {
             rows,
             position: {
-                x: document.body.offsetWidth / 2,
-                y: document.body.offsetHeight / 2
+                x: -1000,
+                y: -1000
             }
         }
 
@@ -37,12 +39,17 @@ class Abacus extends Component {
     componentDidMount() {
         this.refs.body.ondragstart = () => false
 
-        this.setState({
-            position: {
-                x: document.body.offsetWidth / 2 - this.refs.body.offsetHeight / 2,
-                y: document.body.offsetHeight / 2 - this.refs.body.offsetHeight / 2
-            }
-        })
+        if(this.state.position.x === -1000 && this.state.position.y === -1000)
+            this.setState({
+                position: {
+                    x: document.body.offsetWidth / 2 - this.refs.body.offsetHeight / 2,
+                    y: document.body.offsetHeight / 2 - this.refs.body.offsetHeight / 2
+                }
+            })
+    }
+
+    componentDidUpdate() {
+        localStorage.setItem(this.props.id, JSON.stringify(this.state))
     }
 
     mutate(row, i) {
