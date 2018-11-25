@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/russian-abacus/precache-manifest.0f58d4727cf6926e12dc49655fa1f41a.js"
+  "/russian-abacus/precache-manifest.1cc062289595ba992bea8a8039cc41e7.js"
 );
 
 workbox.clientsClaim();
