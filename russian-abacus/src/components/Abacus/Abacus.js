@@ -122,7 +122,7 @@ class Abacus extends Component {
         style.transform = `translate(${position.x}px, ${position.y}px)`
 
         if(mini) {
-            style.height = document.body.offsetHeight - 15
+            style.height = document.body.offsetHeight - 30 // - 15
         }
 
         return (

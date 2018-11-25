@@ -14,7 +14,7 @@
 
 .single-line .Abacus {
     border: solid 15px #996624;
-    border-top: none;
+    /* border-top: none; */
     width: calc(100vw - 15px * 2);
     transform: translate(0, 0) !important;
 }
