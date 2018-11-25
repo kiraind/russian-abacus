@@ -86,6 +86,8 @@ class App extends Component {
     }
 
     render() {
+        const { mini } = this.props
+
         return (
             <>
                 {
@@ -96,11 +98,16 @@ class App extends Component {
                             quaters={abacus.quaters}
                             key={abacus.id}
                             toFront={this.toFront}
+                            mini={mini}
                         />
                     )
                 }
-                <ClearFab onClick={this.clearAll} />
-                <AddFab onClick={this.newAbacus} />
+                {
+                    !mini && (<>
+                        <ClearFab onClick={this.clearAll} />
+                        <AddFab onClick={this.newAbacus} />
+                    </>)
+                }
             </>
         );
     }

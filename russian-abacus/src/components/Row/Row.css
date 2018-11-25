@@ -1,8 +1,5 @@
 .Row {
-    /* background-color:rgba(0, 0, 0, 0.1); */
-    height: 75px;
-    max-width: calc(33.75px * 16);
-    min-width: calc(33.75px * 11.5);
+    height: calc(100% / 8);
     width: 100%;
     position: relative;
     cursor: initial;
@@ -12,11 +9,11 @@
     height: 7.5px;
     background-color: #bababa;
     position: relative;
-    top: 33.75px;
+    top: calc(50% - 7.5px / 2);
 }
 
 .Die {
-    height: 67.5px;
+    height: 90%;
     width: 30px;
     position: absolute;
     top: calc(7.5px/2);
@@ -32,4 +29,8 @@
 
 .Die.light {
     background-color: #ddcfaa;
+}
+
+.single-line .Die {
+    width: 25px;
 }

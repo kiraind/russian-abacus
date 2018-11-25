@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Row.css'
 
 const die_width = 33.75
+const mini_die_width = 28.75
 
 const Die = ({ taken, shift, dark, index, mutate }) => {
     let style = {}
@@ -30,11 +31,12 @@ class Row extends Component {
     }
 
     render() {
-        const { taken, count, index, mutate } = this.props
+        const { taken, count, index, mutate, mini } = this.props
+        const width = mini ? mini_die_width : die_width
         
         const dice = []
         let l_shift = 0
-        let r_shift = die_width * (count - 1 - taken)
+        let r_shift = width * (count - 1 - taken)
 
         for(let i = 0; i < count; i++) {
             dice.push(
@@ -49,9 +51,9 @@ class Row extends Component {
             )
 
             if(i < taken) {
-                l_shift += die_width
+                l_shift += width
             } else {
-                r_shift -= die_width
+                r_shift -= width
             }
         }
 

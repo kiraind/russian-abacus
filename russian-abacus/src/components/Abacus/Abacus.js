@@ -74,6 +74,8 @@ class Abacus extends Component {
                 ...rows.slice(row + 1),
             ]
         })
+
+        window.navigator.vibrate(10);
     }
 
     onmousedown(e) {
@@ -113,10 +115,15 @@ class Abacus extends Component {
     }
 
     render() {
+        const { mini } = this.props
         const { rows, position } = this.state
         const style = {}
 
         style.transform = `translate(${position.x}px, ${position.y}px)`
+
+        if(mini) {
+            style.height = document.body.offsetHeight - 15
+        }
 
         return (
             <div
@@ -134,6 +141,7 @@ class Abacus extends Component {
                             mutate={this.mutate}
                             index={i}
                             key={i}
+                            mini={mini}
                         />
                     ))
                 }

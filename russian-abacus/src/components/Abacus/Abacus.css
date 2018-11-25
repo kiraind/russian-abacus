@@ -1,5 +1,6 @@
 .Abacus {
     border: solid 30px #996624;
+    height: calc(75px * 8);
     width: calc(33.75px * 13);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -9,4 +10,11 @@
 
 .Abacus:active {
     cursor: grabbing;
+}
+
+.single-line .Abacus {
+    border: solid 15px #996624;
+    border-top: none;
+    width: calc(100vw - 15px * 2);
+    transform: translate(0, 0) !important;
 }
