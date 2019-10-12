@@ -1,6 +1,6 @@
 # Симулятор счет для 2к19
 
-#### тупа поиграться
+#### [КТЫКТЫКТЫКТЫКТЫКТ](https://kiraind.github.io/russian-abacus/)
 
 ![топ пикча](https://github.com/kiraind/russian-abacus/raw/master/cover.png)
 
